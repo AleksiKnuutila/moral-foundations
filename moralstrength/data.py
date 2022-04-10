@@ -37,7 +37,7 @@ def read_study1_dataset():
 
     morality_mean = df['Morality'].mean()
 
-    morals = ['harm', 'fairness', 'ingroup', 'authority', 'purity']
+    morals = ['harm', 'fairness', 'ingroup', 'authority', 'purity', 'liberty']
     for moral in morals:
         df[moral] = df[[col for col in floats if col.lower().startswith(moral)]].sum(axis=1)
 
@@ -60,7 +60,7 @@ def read_study1_dataset():
     return df
 
 ## Read Lexicon
-moral_label = {'fairness': 'FC', 'loyalty': 'LB', 'care': 'CH', 'purity': 'PD', 'authority': 'AS', 'non-moral': 'NM'}
+moral_label = {'fairness': 'FC', 'loyalty': 'LB', 'care': 'CH', 'purity': 'PD', 'authority': 'AS', 'liberty': 'LB', 'non-moral': 'NM'}
 
 def _read_moral_lex(moral_df, moral_dict, version):
     moral_lex = dict()

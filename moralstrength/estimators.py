@@ -6,7 +6,7 @@ from gsitk.preprocess import pprocess_twitter, simple, Preprocessor
 
 from moralstrength.lexicon_use import form_text_vector
 
-moral_options = ('care', 'fairness', 'loyalty', 'authority', 'purity', 'non-moral')
+moral_options = ('care', 'fairness', 'loyalty', 'authority', 'purity', 'liberty', 'non-moral')
 models = (
     'simon', 'unigram', 'count', 'freq',
     'simon+count', 'simon+freq', 'simon+count+freq',
